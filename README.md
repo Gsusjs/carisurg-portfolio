@@ -10,3 +10,29 @@ The following mappings were used to standardize the data:
 2. `Female`, `FEMALE`, and `0` were converted to `0`
 
 This cleaning process improved consistency, reduced errors, and made the dataset more reliable for analysis. It also showed how differences in capitalization, numeric values, and missing data can affect data quality. Clear and readable Python code was used to load the CSV file, clean the `Gender` column, and document each step so the process could be easily understood and repeated.
+
+
+
+Week 0 - Assignment 2
+
+## Assignment 2: Advanced Cleaning (DBP Column)
+
+This notebook cleans the DBP column by:
+- Converting to numeric
+- Replacing out-of-range values (<30 or >150 mmHg) with NaN
+- Imputing missing values with the median
+- Printing summary statistics
+
+### Output Evidence
+
+**Memory usage and missing values**
+![Memory usage screenshot](screenshots/memory_usage.png)
+
+**Outliers detected**
+![Outliers screenshot](screenshots/outliers.png)
+
+**After column cleaning**
+![Cleaned DBP summary](screenshots/dbp_cleaned_summary.png)
+
+**NaNs remaining**
+![NaNs remaining screenshot](screenshots/nans_remaining.png)
