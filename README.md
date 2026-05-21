@@ -1,12 +1,12 @@
 # carisurg-portfolio
 
-Overview
-Assignment One at Mercer General Hospital’s Clinical AI & Innovation Unit focused on the importance of data cleaning and preprocessing to prepare a triage dataset for accurate analysis and machine learning tasks. The activity used the file EmergencyTriageDataset_Reduced_Dirty.csv, where the Gender column contained inconsistent values that could lead to inaccurate results if left uncleaned. The main objective was to improve data quality, ensure consistency, and prevent analytical errors by standardizing the values into a single binary format.
+### Overview
 
-The following mappings were applied during the cleaning process:
+Week 0 – Assignment 1 focused on cleaning the `Gender` column in a dataset for Mercer General Hospital’s Clinical AI & Innovation Unit. The purpose of the activity was to demonstrate the importance of data cleaning and preprocessing before performing analysis or using machine learning models. The dataset used was *EmergencyTriageDataset_Reduced_Dirty.csv*, where the `Gender` column contained inconsistent values that could lead to inaccurate results if left uncleaned.
+
+The following mappings were used to standardize the data:
 
 1. `Male`, `MALE`, and `1` were converted to `1`
 2. `Female`, `FEMALE`, and `0` were converted to `0`
 
-This process demonstrated how inconsistent entries, capitalization differences, numeric encodings, and missing data in a triage AI context can affect the reliability of a dataset and weaken statistical or machine learning models. Clear and readable Python code was used to load the CSV file, clean the Gender column, and document each transformation step so the workflow could be easily understood and reproduced.
-
+This cleaning process improved consistency, reduced errors, and made the dataset more reliable for analysis. It also showed how differences in capitalization, numeric values, and missing data can affect data quality. Clear and readable Python code was used to load the CSV file, clean the `Gender` column, and document each step so the process could be easily understood and repeated.
