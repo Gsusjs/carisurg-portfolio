@@ -43,3 +43,8 @@ I chose the **DBP (Diastolic Blood Pressure)** column for cleaning. DBP represen
 * Printed the number of corrected outliers, summary statistics, and remaining `NaN` values to verify successful cleaning.
 
 This approach demonstrates correct handling of invalid data, clinical understanding through the use of realistic physiological limits, and readable code through clear variable names and concise outputs.
+
+## DBP Cleaning Output
+
+![DBP cleaned summary](screenshots/dbp_cleaned_summary.png)
+
