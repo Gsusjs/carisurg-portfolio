@@ -20,8 +20,11 @@ The following mappings were used to standardize the data:
 
 This cleaning process improved consistency, reduced errors, and made the dataset more reliable for analysis. It also showed how differences in capitalization, numeric values, and missing data can affect data quality. Clear and readable Python code was used to load the CSV file, clean the `Gender` column, and document each step so the process could be easily understood and repeated.
 
+## Gender Column Cleaning Output
 
+carisurg-portfolio/screenshots/week_0/Assignment_1/clean_gender_column.png
 
+---
 Week 0 - Assignment 2
 
 ## Assignment 2: Advanced Cleaning (DBP Column)
@@ -46,5 +49,4 @@ This approach demonstrates correct handling of invalid data, clinical understand
 
 ## DBP Cleaning Output
 
-![DBP cleaned summary](dbp_cleaned_summary.png)
-
+carisurg-portfolio/screenshots/week_0/Assignment_2/dbp_cleaned_summary.png
