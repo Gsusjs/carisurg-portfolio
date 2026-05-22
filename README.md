@@ -46,5 +46,5 @@ This approach demonstrates correct handling of invalid data, clinical understand
 
 ## DBP Cleaning Output
 
-![DBP cleaned summary](screenshots/dbp_cleaned_summary.png)
+![DBP cleaned summary](dbp_cleaned_summary.png)
 
