@@ -25,68 +25,16 @@ Week 0 - Assignment 2
 
 ## Overview
 
-This notebook focuses on cleaning the **DBP (Diastolic Blood Pressure)** column in the dataset. DBP represents the pressure in the arteries when the heart rests between beats and is important for accurate clinical analysis and MAP calculations.
+I chose the **DBP (Diastolic Blood Pressure)** column for cleaning. DBP represents the pressure in the arteries when the heart rests between beats and is important for accurate clinical analysis and MAP calculations. The DBP column was selected because accurate diastolic blood pressure values are essential for patient assessment and reliable analysis results.
 
----
+## What Was Done and Why
 
-## Cleaning Steps
+* Imported `pandas` and `numpy` for data handling and numerical operations.
+* Loaded the dataset from Google Drive using its file ID for reliable access in Colab.
+* Defined physiological DBP limits (`30–150 mmHg`) to identify unrealistic values.
+* Converted DBP values to numeric using `errors='coerce'`, replacing invalid entries with `NaN`.
+* Replaced out-of-range values with `NaN` because they are not clinically valid.
+* Imputed missing values using the median, since it is resistant to outliers.
+* Printed the number of corrected outliers, summary statistics, and remaining `NaN` values to verify successful cleaning.
 
-### 1. Import Libraries
-
-`pandas` and `numpy` were imported for data handling and cleaning.
-
-### 2. Load Dataset
-
-The dataset was loaded directly from Google Drive using `pd.read_csv()`.
-`df_raw.info()` was used to inspect column types and missing values.
-
-### 3. Convert DBP to Numeric
-
-```python id="e1d6um"
-df_raw['DBP'] = pd.to_numeric(df_raw['DBP'], errors='coerce')
-```
-
-This converted invalid or non-numeric entries into `NaN` values for easier cleaning.
-
-### 4. Identify and Handle Outliers
-
-DBP values outside the clinical range of **30–150 mmHg** were treated as outliers and replaced with `NaN`.
-
-```python id="8tkr8v"
-df_raw.loc[(df_raw['DBP'] < 30) | (df_raw['DBP'] > 150), 'DBP'] = np.nan
-```
-
-### 5. Impute Missing Values
-
-Missing values were filled using the median because the median is less affected by extreme values.
-
-```python id="9n2b6o"
-median_value = df_raw['DBP'].median()
-df_raw['DBP'] = df_raw['DBP'].fillna(median_value)
-```
-
-### 6. Verify Cleaning Results
-
-`describe()` and `isnull().sum()` were used to confirm the column was cleaned successfully.
-
----
-
-## Screenshot Included
-
-* `dbp_cleaned_summary.png`
-
-The screenshot shows the cleaned DBP summary statistics after handling missing values and outliers.
-
----
-
-## Deliverables
-
-* Cleaning notebook with comments explaining decisions
-* Screenshot shared on Discord
-* Notebook uploaded to the `carisurg-portfolio` GitHub repository
-
-### Commit Message
-
-```bash id="v5rr1y"
-Cleaned DBP column: handled NaNs, outliers, and imputed with median
-```
+This approach demonstrates correct handling of invalid data, clinical understanding through the use of realistic physiological limits, and readable code through clear variable names and concise outputs.
