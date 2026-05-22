@@ -24,9 +24,11 @@ This cleaning process improved consistency, reduced errors, and made the dataset
 
 ## Assignment 2: DBP Cleaning Output
 
-![DBP cleaned summary](screenshots/week_0/Assignment_2/dbp_cleaned_summary.png)
+![Gender Column Cleaning](screenshots/week_0/Assignment_1/clean_gender_column.png)
 
----
+
+
+
 Week 0 - Assignment 2
 
 ## Assignment 2: Advanced Cleaning (DBP Column)
