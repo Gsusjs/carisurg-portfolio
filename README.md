@@ -22,7 +22,9 @@ This cleaning process improved consistency, reduced errors, and made the dataset
 
 ## Gender Column Cleaning Output
 
-carisurg-portfolio/screenshots/week_0/Assignment_1/clean_gender_column.png
+## Assignment 2: DBP Cleaning Output
+
+![DBP cleaned summary](screenshots/week_0/Assignment_2/dbp_cleaned_summary.png)
 
 ---
 Week 0 - Assignment 2
@@ -49,4 +51,6 @@ This approach demonstrates correct handling of invalid data, clinical understand
 
 ## DBP Cleaning Output
 
-carisurg-portfolio/screenshots/week_0/Assignment_2/dbp_cleaned_summary.png
+## Assignment 2: DBP Cleaning Output
+
+![DBP cleaned summary](screenshots/week_0/Assignment_2/dbp_cleaned_summary.png)
