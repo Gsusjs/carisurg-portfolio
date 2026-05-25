@@ -77,3 +77,15 @@ For this exercise, **Diastolic Blood Pressure (DBP)** was analyzed alongside **A
 ![DBP vs Age Scatter](screenshots/week_0/Assignment_3/dbp_vs_age_scatter.png)
 
 The notebook was organized into clear sections with consistent indentation, descriptive variable names, and comments explaining each step of the analysis.
+
+---
+
+Week 0 - Assignment 4
+
+### Assignment 4: Vital Sign Report
+
+### Overview
+
+This section provides an introduction to Systolic Blood Pressure (SBP) as a key vital sign used in clinical assessment. It outlines what SBP measures, why it is important in healthcare settings, and how it is used to evaluate a patient’s cardiovascular status. The overview also summarises normal, low, and high SBP ranges and explains the clinical significance of abnormal readings, including conditions such as hypotension, hypertension, and hypertensive crisis. In addition, it describes how SBP is typically measured in clinical practice and highlights its role in supporting triage decisions and urgent patient care prioritisation.
+
+![Vital Signs Report](screenshots/week_0/Assignment_4/vital_signs_report.png)
