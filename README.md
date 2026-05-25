@@ -35,8 +35,6 @@ Week 0 - Assignment 2
 
 ## Assignment 2: Advanced Cleaning (DBP Column)
 
-# Assignment: Cleaning the DBP Column
-
 ## Overview
 
 I chose the **DBP (Diastolic Blood Pressure)** column for cleaning. DBP represents the pressure in the arteries when the heart rests between beats and is important for accurate clinical analysis and MAP calculations. The DBP column was selected because accurate diastolic blood pressure values are essential for patient assessment and reliable analysis results.
@@ -58,3 +56,24 @@ This approach demonstrates correct handling of invalid data, clinical understand
 ## Assignment 2: DBP Cleaning Output
 
 ![DBP cleaned summary](screenshots/week_0/Assignment_2/dbp_cleaned_summary.png)
+
+---
+Week 0 - Assignment 3
+
+### Assignment 3: Basic Data Visualisation with matplotlib
+
+## Overview
+
+For this exercise, **Diastolic Blood Pressure (DBP)** was analyzed alongside **Age** because both are important indicators of cardiovascular health. The dataset was successfully loaded into a pandas DataFrame and cleaned by correcting invalid values and replacing missing data where necessary. Descriptive statistics were generated using the `.describe()` function to summarize the dataset and confirm that values fell within expected clinical ranges.
+
+### Visualizations
+
+* **Histogram of DBP:** Used to show the distribution of DBP values across the dataset. Reference lines at **60 mmHg** and **90 mmHg** indicate hypotension and hypertension thresholds, helping identify patients outside the normal DBP range.
+
+![DBP distribution histogram](screenshots/week_0/Assignment_3/dbp_distribution_histogram.png)
+
+* **Scatter Plot of DBP vs Age:** Used to examine the relationship between Age and DBP. Reference lines and a shaded normal range were included to support interpretation and identify age groups with abnormal DBP values.
+
+![DBP vs Age Scatter](screenshots/week_0/Assignment_3/dbp_vs_age_scatter.png)
+
+The notebook was organized into clear sections with consistent indentation, descriptive variable names, and comments explaining each step of the analysis.
