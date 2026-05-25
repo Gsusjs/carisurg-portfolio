@@ -82,8 +82,19 @@ The notebook was organized into clear sections with consistent indentation, desc
 
 Week 0 - Assignment 4
 
-### Assignment 4: Vital Sign Report
+### Assignment 4: Vital Signs Report
 
 ## Overview
 
 This section provides an introduction to Systolic Blood Pressure (SBP) as a key vital sign used in clinical assessment. It outlines what SBP measures, why it is important in healthcare settings, and how it is used to evaluate a patient’s cardiovascular status. The overview also summarises normal, low, and high SBP ranges and explains the clinical significance of abnormal readings, including conditions such as hypotension, hypertension, and hypertensive crisis. In addition, it describes how SBP is typically measured in clinical practice and highlights its role in supporting triage decisions and urgent patient care prioritisation.
+
+---
+
+Week 0 - Assignment 5
+
+### Assignment 5: Another Unconsidered Vital Signs Report
+
+## Overview
+
+This section explains Oxygen Saturation (SpO₂) as a key vital sign used in clinical practice to assess a patient’s oxygenation status. It describes what SpO₂ measures, how it is obtained using a pulse oximeter, and why it is important in both routine observations and emergency care. The overview outlines normal and abnormal SpO₂ ranges, including levels that indicate mild hypoxaemia, clinically significant hypoxaemia, and severe respiratory failure. It also highlights the clinical importance of SpO₂ in identifying patient deterioration and supporting triage decisions, particularly when interpreted alongside other vital signs.
+
