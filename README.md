@@ -98,3 +98,21 @@ Week 0 - Assignment 5
 
 This section explains Oxygen Saturation (SpO₂) as a key vital sign used in clinical practice to assess a patient’s oxygenation status. It describes what SpO₂ measures, how it is obtained using a pulse oximeter, and why it is important in both routine observations and emergency care. The overview outlines normal and abnormal SpO₂ ranges, including levels that indicate mild hypoxaemia, clinically significant hypoxaemia, and severe respiratory failure. It also highlights the clinical importance of SpO₂ in identifying patient deterioration and supporting triage decisions, particularly when interpreted alongside other vital signs.
 
+---
+
+Week 0 - Assignment 6
+
+### Assignment 6: Digital Triage Algorithm
+
+
+## Overview
+
+This project is a simple digital triage system designed to identify patients at risk of clinical deterioration using routinely collected vital signs. It supports clinical decision-making by categorising patients into risk levels based on abnormal physiological observations.
+
+The model uses six key inputs: systolic blood pressure, oxygen saturation, heart rate, respiratory rate, temperature, and Glasgow Coma Scale. A cumulative scoring system is applied where abnormal values contribute to an overall risk score, with more severe abnormalities contributing higher weights. The final score determines whether a patient is classified as Normal, Moderate, High, or Critical risk.
+
+Thresholds are based on standard adult emergency medicine ranges used to detect conditions such as shock, hypoxia, respiratory distress, infection, and neurological impairment.
+
+The system outputs both a final risk classification and a list of clinical alerts highlighting detected abnormalities.
+
+This model is designed for adult patients only, does not include laboratory data or full clinical history, and is intended as a decision-support tool rather than a replacement for clinical judgement. AI tool (ChatGPT) were used to assist with structuring and refining the explanation.
