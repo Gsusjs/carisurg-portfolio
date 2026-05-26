@@ -109,8 +109,15 @@ Week 0 - Assignment 6
 
 This project is a simple digital triage system designed to identify patients at risk of clinical deterioration using routinely collected vital signs. It supports clinical decision-making by categorising patients into risk levels based on abnormal physiological observations.
 
-The model uses six key inputs: systolic blood pressure, oxygen saturation, heart rate, respiratory rate, temperature, and Glasgow Coma Scale. A cumulative scoring system is applied where abnormal values contribute to an overall risk score, with more severe abnormalities contributing higher weights. The final score determines whether a patient is classified as Normal, Moderate, High, or Critical risk.
-
-Thresholds are based on standard adult emergency medicine ranges used to detect conditions such as shock, hypoxia, respiratory distress, infection, and neurological impairment. The system outputs both a final risk classification and a list of clinical alerts highlighting detected abnormalities.
+The model uses six key inputs: systolic blood pressure, oxygen saturation, heart rate, respiratory rate, temperature, and Glasgow Coma Scale. A cumulative scoring system is applied where abnormal values contribute to an overall risk score, with more severe abnormalities contributing higher weights. The final score determines whether a patient is classified as Normal, Moderate, High, or Critical risk. Thresholds are based on standard adult emergency medicine ranges used to detect conditions such as shock, hypoxia, respiratory distress, infection, and neurological impairment. The system outputs both a final risk classification and a list of clinical alerts highlighting detected abnormalities.
 
 This model is designed for adult patients only, does not include laboratory data or full clinical history, and is intended as a decision-support tool rather than a replacement for clinical judgement. AI tool (ChatGPT) were used to assist with structuring and refining the explanation.
+
+---
+
+Week 0 Career Challenge
+
+### My Twelve Week Productivity Plan
+
+## Overview
+This project involved reviewing my time management over a two-week period and developing a structured 12-week plan to improve productivity and consistency. Based on my audit, I identified inefficiencies such as task switching and irregular study patterns, with an average of 10–12 study hours per week. In response, I created a weekly schedule that protects approximately 20 hours for CariSurg, organised into consistent study blocks across weekdays and weekends, with additional time allocated for assignments and review. I also applied the Pomodoro Technique to improve focus and maintain steady progress over time.
