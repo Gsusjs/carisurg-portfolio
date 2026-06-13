@@ -55,7 +55,7 @@ This approach demonstrates correct handling of invalid data, clinical understand
 
 ## Assignment 2: DBP Cleaning Output
 
-![DBP cleaned summary](screenshots/week_0/Assignment_2/dbp_cleaned_summary.png)
+![DBP cleaned summary](docs/week0/screenshots/Assignment_2/dbp_cleaned_summary.png)
 
 ---
 Week 0 - Assignment 3
@@ -70,11 +70,11 @@ For this exercise, **Diastolic Blood Pressure (DBP)** was analyzed alongside **A
 
 * **Histogram of DBP:** Used to show the distribution of DBP values across the dataset. Reference lines at **60 mmHg** and **90 mmHg** indicate hypotension and hypertension thresholds, helping identify patients outside the normal DBP range.
 
-![DBP distribution histogram](screenshots/week_0/Assignment_3/dbp_distribution_histogram.png)
+![DBP distribution histogram](docs/week0/screenshots/Assignment_3/dbp_distribution_histogram.png)
 
 * **Scatter Plot of DBP vs Age:** Used to examine the relationship between Age and DBP. Reference lines and a shaded normal range were included to support interpretation and identify age groups with abnormal DBP values.
 
-![DBP vs Age Scatter](screenshots/week_0/Assignment_3/dbp_vs_age_scatter.png)
+![DBP vs Age Scatter](docs/week0/screenshots/Assignment_3/dbp_vs_age_scatter.png)
 
 The notebook was organized into clear sections with consistent indentation, descriptive variable names, and comments explaining each step of the analysis.
 
