@@ -1,7 +1,7 @@
 # carisurg-portfolio
  
 ### Overview
----
+--- 
 
 The Carisurg Portfolio Program is a training initiative that combines healthcare knowledge with practical coding skills, focusing on clinical data cleaning, visualization, and digital triage. Its purpose is to help trainees develop confidence in handling hospital datasets, interpreting vital signs through clear visual outputs, and designing simple decision-support algorithms that connect technical analysis with patient risk assessment. Overall, the program bridges data science and clinical judgment, preparing learners for applied healthcare technology projects.
 
@@ -121,3 +121,4 @@ Week 0 Career Challenge
 
 ## Overview
 This project involved reviewing my time management over a two-week period and developing a structured 12-week plan to improve productivity and consistency. Based on my audit, I identified inefficiencies such as task switching and irregular study patterns, with an average of 10–12 study hours per week. In response, I created a weekly schedule that protects approximately 20 hours for CariSurg, organised into consistent study blocks across weekdays and weekends, with additional time allocated for assignments and review. I also applied the Pomodoro Technique to improve focus and maintain steady progress over time.
+
