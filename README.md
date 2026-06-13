@@ -1,7 +1,7 @@
 # carisurg-portfolio
 
 ### Overview
----
+--- 
 
 The Carisurg Portfolio Program is a training initiative that combines healthcare knowledge with practical coding skills, focusing on clinical data cleaning, visualization, and digital triage. Its purpose is to help trainees develop confidence in handling hospital datasets, interpreting vital signs through clear visual outputs, and designing simple decision-support algorithms that connect technical analysis with patient risk assessment. Overall, the program bridges data science and clinical judgment, preparing learners for applied healthcare technology projects.
 
