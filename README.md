@@ -122,3 +122,14 @@ Week 0 Career Challenge
 ## Overview
 This project involved reviewing my time management over a two-week period and developing a structured 12-week plan to improve productivity and consistency. Based on my audit, I identified inefficiencies such as task switching and irregular study patterns, with an average of 10–12 study hours per week. In response, I created a weekly schedule that protects approximately 20 hours for CariSurg, organised into consistent study blocks across weekdays and weekends, with additional time allocated for assignments and review. I also applied the Pomodoro Technique to improve focus and maintain steady progress over time.
 
+
+
+---
+
+## How to Run
+
+1. Clone the repository  
+2. Install dependencies:
+   pip install -r requirements.txt  
+3. Open notebooks/week0 in Jupyter Notebook or VS Code  
+4. Run cells from top to bottom
