@@ -124,6 +124,12 @@ This project involved reviewing my time management over a two-week period and de
 
 ---
 
+## Project Timeline
+
+- Week 0: Exploratory Data Analysis and notebook setup
+- Week 1: Literature review on AI-assisted emergency triage
+- Week 2: Repository restructuring, reference management, and expanded proposal
+
 ## How to Run
 
 1. Clone the repository  
