@@ -37,4 +37,15 @@ pip install -r requirements.txt
 
 ## Notes
 
+
+
+---
+
+## How to Run
+
+1. Clone the repository  
+2. Install dependencies:
+   pip install -r requirements.txt  
+3. Open notebooks/week0 in Jupyter Notebook or VS Code  
+4. Run cells from top to bottom
 This project follows a reproducible research workflow using GitHub version control, structured documentation, and reference management (Zotero).
