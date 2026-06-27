@@ -61,3 +61,5 @@ Additional safeguards should have included:
 - Ensuring human oversight of AI-supported decisions
 
 This case demonstrates that predictive accuracy alone is insufficient for safe healthcare AI. Fairness testing, transparency and continuous governance are essential safeguards throughout the AI lifecycle.
+
+A pre-deployment fairness audit comparing model performance across demographic groups would likely have identified the disparity before the algorithm was used at scale.
