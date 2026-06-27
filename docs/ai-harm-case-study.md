@@ -2,68 +2,62 @@
 
 ## Primary Source
 
-Obermeyer, Z., Powers, B., Vogeli, C., & Mullainathan, S. (2019). *Dissecting racial bias in an algorithm used to manage the health of populations*. Science, 366(6464), 447–453.
+Obermeyer, Z., Powers, B., Vogeli, C., & Mullainathan, S. (2019).  
+*Dissecting racial bias in an algorithm used to manage the health of populations*.  
+Science, 366(6464), 447–453.
 
 DOI: https://doi.org/10.1126/science.aax2342
 
+---
+
 ## 1. What happened?
 
-A commercially developed risk stratification algorithm was used across the United States to identify patients eligible for high risk care management programmes.
+A commercially developed risk-stratification algorithm was used across the United States to identify patients eligible for high-risk care management programmes. These programmes provided additional healthcare resources, such as dedicated nursing support and care coordination, to patients predicted to benefit most.
 
-Researchers discovered an equity failure: the algorithm systematically assigned lower risk scores to Black patients compared with White patients who had the same level of illness severity. As a result, the system reduced the number of Black patients identified for additional care support by more than half.
+Researchers discovered an equity failure: the algorithm systematically assigned lower risk scores to Black patients compared with White patients who had similar levels of illness. As a result, fewer Black patients were identified as needing additional support, reducing access to potentially beneficial healthcare resources.
 
 ---
 
 ## 2. Why did it happen?
 
-The failure was caused by the use of an inappropriate proxy variable.
+The failure was caused by the use of an inappropriate proxy variable. Developers did not have a direct measure of patient health need, so they used future healthcare costs as a substitute.
 
-Because developers did not have a direct digital measurement of healthcare need, they used future healthcare costs as a substitute. Although the algorithm accurately predicted healthcare costs, those costs reflected unequal patterns of healthcare access rather than true differences in clinical need.
+The model accurately predicted future healthcare spending, but spending was not a neutral measure of health. Healthcare costs reflected differences in access, healthcare utilisation, insurance coverage and wider socioeconomic conditions.
 
-The model therefore learned that lower healthcare spending meant lower healthcare need, even when patients had similar health conditions.
+As a result, the algorithm learned patterns from unequal healthcare access rather than true differences in clinical need.
 
 ---
 
 ## 3. What did the system fail to anticipate?
 
-The developers failed to account for structural socioeconomic inequities within healthcare systems.
+The developers failed to recognise that historical healthcare inequalities were embedded within the training data.
 
-The algorithm reproduced existing disparities because healthcare spending is influenced by access barriers, availability of care, and historical inequalities. Black patients with similar levels of illness often had lower healthcare costs due to reduced access to healthcare services.
+Lower healthcare spending did not necessarily indicate that patients were healthier. Some groups experienced lower spending because of reduced access to healthcare services. The system therefore interpreted lower spending as lower need.
 
-The system incorrectly interpreted lower spending as lower clinical need.
+The algorithm reproduced existing structural inequities because the data used for prediction reflected unequal healthcare opportunities.
 
 ---
 
 ## 4. Was the failure technical or human?
 
-This was a combined technical and governance failure.
+This was a hybrid failure involving both technical design and governance.
 
-From a technical perspective, the main issue was proxy bias. The model used healthcare cost as a representation of health need, even though cost does not accurately measure disease severity.
+The technical failure was proxy bias: healthcare cost was used as a representation of health need, even though it contained existing social and healthcare inequalities.
 
-From a governance perspective, the organisations deploying the system failed to perform adequate fairness testing before implementation. Disaggregated evaluation across demographic groups could have identified unequal performance.
+The governance failure was insufficient validation before deployment. The organisations using the system did not conduct adequate fairness testing to determine whether performance was consistent across different patient groups.
 
 ---
 
 ## 5. What would have prevented the harm?
 
-The harm could have been prevented by using direct clinical measures of disease burden rather than financial proxies.
+The harm could have been reduced by selecting direct clinical measures of disease burden rather than financial proxies.
 
 Additional safeguards should have included:
 
-* Fairness testing before deployment
-* Evaluation of performance across demographic groups
-* Monitoring differences in recall and error rates
-* Continuous governance throughout the AI lifecycle
+- Testing model performance across demographic groups before deployment
+- Monitoring subgroup recall and error rates
+- Conducting regular equity audits after implementation
+- Reviewing variables influencing model decisions
+- Ensuring human oversight of AI-supported decisions
 
-For example, comparing recall at threshold values across racial groups would have revealed the disparity before the system was used in clinical decision making.
-
----
-
-## Key Lesson
-
-This case demonstrates that predictive accuracy alone is not enough for safe clinical AI.
-
-Reliable AI systems require fairness testing, transparency, continuous monitoring, and strong governance processes to ensure that automated decisions do not reinforce existing healthcare inequalities.
-
-
-
+This case demonstrates that predictive accuracy alone is insufficient for safe healthcare AI. Fairness testing, transparency and continuous governance are essential safeguards throughout the AI lifecycle.
