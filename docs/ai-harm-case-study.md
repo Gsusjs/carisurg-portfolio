@@ -12,54 +12,34 @@ DOI: https://doi.org/10.1126/science.aax2342
 
 ## 1. What happened?
 
-A commercially developed risk-stratification algorithm was used across the United States to identify patients eligible for high-risk care management programmes. These programmes provided additional healthcare resources, such as dedicated nursing support and care coordination, to patients predicted to benefit most.
+Health systems utilized a commercial risk-stratification algorithm to identify patients with complex needs for "high-risk care management" programs (Obermeyer et al., 2019, p. 1). Researchers identified a significant equity failure: at any given risk score, Black patients were considerably sicker than White patients (Obermeyer et al., 2019, p. 2). This meant sicker Black patients were assigned the same risk level as healthier White patients, leading to fewer Black patients being auto-identified for necessary additional support (Obermeyer et al., 2019, p. 2)If this bias were removed, the percentage of Black patients identified for these programs would have risen from 17.7% to 46.5%.
 
-Researchers discovered an equity failure: the algorithm systematically assigned lower risk scores to Black patients compared with White patients who had similar levels of illness. As a result, fewer Black patients were identified as needing additional support, reducing access to potentially beneficial healthcare resources.
 
 ---
 
 ## 2. Why did it happen?
 
-The failure was caused by the use of an inappropriate proxy variable. Developers did not have a direct measure of patient health need, so they used future healthcare costs as a substitute.
+The failure was rooted in the choice of the proxy variable used for prediction. Instead of predicting health needs directly, the algorithm was designed to predict future healthcare costs (Obermeyer et al., 2019, p. 3). While the algorithm was highly accurate at predicting cost, cost is not a neutral proxy for health (Obermeyer et al., 2019, p. 3). Because of systemic barriers, Black patients generate lower healthcare costs than White patients even when they have the same level of clinical need (Obermeyer et al., 2019, p. 4). The algorithm therefore learned patterns based on unequal healthcare access and utilization rather than actual clinical severity (Obermeyer et al., 2019, p. 4).
 
-The model accurately predicted future healthcare spending, but spending was not a neutral measure of health. Healthcare costs reflected differences in access, healthcare utilisation, insurance coverage and wider socioeconomic conditions.
-
-As a result, the algorithm learned patterns from unequal healthcare access rather than true differences in clinical need.
 
 ---
 
 ## 3. What did the system fail to anticipate?
 
-The developers failed to recognise that historical healthcare inequalities were embedded within the training data.
+The developers failed to account for structural and historical healthcare inequalities embedded in the training data (Obermeyer et al., 2019, p. 6). They did not anticipate that the "wedge" between needing care and receiving care would be so strongly correlated with race (Obermeyer et al., 2019, p. 4). Factors causing this discrepancy include socioeconomic barriers like transportation issues, systemic clinical biases resulting in lower medical spending for Black patients regardless of need, and the misinterpretation of lower spending as a sign of health rather than reduced access to specialized care (Obermeyer et al., 2019, p. 4).
 
-Lower healthcare spending did not necessarily indicate that patients were healthier. Some groups experienced lower spending because of reduced access to healthcare services. The system therefore interpreted lower spending as lower need.
-
-The algorithm reproduced existing structural inequities because the data used for prediction reflected unequal healthcare opportunities.
 
 ---
 
 ## 4. Was the failure technical or human?
 
-This was a hybrid failure involving both technical design and governance.
+This was a hybrid failure of technical design and institutional governance.
+Technical Failure: This is categorized as "label bias" or "proxy bias" (Obermeyer et al., 2019, p. 6). The technical decision to use total medical expenditures as the target variable directly introduced racial bias because the relationship between health and cost differs by race (Obermeyer et al., 2019, p. 4,7).
+Human/Governance Failure: There was a failure in problem formulation and validation (Obermeyer et al., 2019, p. 5). The industry standard prioritized cost prediction as the primary metric for accuracy (Obermeyer et al., 2019, p. 5). Deploying organizations failed to conduct sufficient fairness audits or clinical validation to ensure risk scores accurately reflected illness burden across demographic groups (Obermeyer et al., 2019, p. 7).
 
-The technical failure was proxy bias: healthcare cost was used as a representation of health need, even though it contained existing social and healthcare inequalities.
-
-The governance failure was insufficient validation before deployment. The organisations using the system did not conduct adequate fairness testing to determine whether performance was consistent across different patient groups.
 
 ---
 
 ## 5. What would have prevented the harm?
 
-The harm could have been reduced by selecting direct clinical measures of disease burden rather than financial proxies.
-
-Additional safeguards should have included:
-
-- Testing model performance across demographic groups before deployment
-- Monitoring subgroup recall and error rates
-- Conducting regular equity audits after implementation
-- Reviewing variables influencing model decisions
-- Ensuring human oversight of AI-supported decisions
-
-This case demonstrates that predictive accuracy alone is insufficient for safe healthcare AI. Fairness testing, transparency and continuous governance are essential safeguards throughout the AI lifecycle.
-
-A pre-deployment fairness audit comparing model performance across demographic groups would likely have identified the disparity before the algorithm was used at scale.
+The harm could have been significantly reduced by choosing direct clinical measures of health instead of financial ones (Obermeyer et al., 2019, p. 5). When the researchers experimented with an algorithm trained to predict the number of active chronic conditions instead of cost, the racial composition of the highest-risk group shifted to include sicker Black patients, reducing bias by 84% (Obermeyer et al., 2019, p. 5,7). Pre-deployment fairness audits comparing model recall across demographic groups would have identified the disparity before the algorithm was used at scale (Obermeyer et al., 2019, p. 7.
