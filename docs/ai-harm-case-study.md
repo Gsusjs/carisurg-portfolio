@@ -34,8 +34,10 @@ The developers failed to account for structural and historical healthcare inequa
 ## 4. Was the failure technical or human?
 
 This was a hybrid failure of technical design and institutional governance.
-Technical Failure: This is categorized as "label bias" or "proxy bias" (Obermeyer et al., 2019, p. 6). The technical decision to use total medical expenditures as the target variable directly introduced racial bias because the relationship between health and cost differs by race (Obermeyer et al., 2019, p. 4,7).
-Human/Governance Failure: There was a failure in problem formulation and validation (Obermeyer et al., 2019, p. 5). The industry standard prioritized cost prediction as the primary metric for accuracy (Obermeyer et al., 2019, p. 5). Deploying organizations failed to conduct sufficient fairness audits or clinical validation to ensure risk scores accurately reflected illness burden across demographic groups (Obermeyer et al., 2019, p. 7).
+
+* Technical Failure: This is categorized as "label bias" or "proxy bias" (Obermeyer et al., 2019, p. 6). The technical decision to use total medical expenditures as the target variable directly introduced racial bias because the relationship between health and cost differs by race (Obermeyer et al., 2019, p. 4,7).
+
+* Human/Governance Failure: There was a failure in problem formulation and validation (Obermeyer et al., 2019, p. 5). The industry standard prioritized cost prediction as the primary metric for accuracy (Obermeyer et al., 2019, p. 5). Deploying organizations failed to conduct sufficient fairness audits or clinical validation to ensure risk scores accurately reflected illness burden across demographic groups (Obermeyer et al., 2019, p. 7).
 
 
 ---
