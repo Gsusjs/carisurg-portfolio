@@ -15,24 +15,57 @@ This repository documents my weekly assignments for the Mercer General Hospital 
 ---
 
 
-## Week 5 — Clinical Data Profiling & Feasibility Assessment  
-Focused on understanding and evaluating an ED triage dataset before modelling, with emphasis on data quality, structure, and clinical meaning.
+# Week 5 — Clinical Data Profiling & Feasibility Assessment
 
-### Tutorial 1 – Clinical Data Literacy  
-- Understood dataset structure and clinical meaning of features  
-- Identified vitals, demographics, chief complaints, and ESI target  
-- Highlighted leakage risks and fairness-sensitive variables  
+This week focused on understanding and evaluating an Emergency Department (ED) triage dataset prior to modelling. The emphasis was on data quality, structure, and clinical interpretation to determine readiness for predictive modelling.
 
-### Tutorial 2 – Data Profiling  
-- Used `.info()`, `.describe()`, `.shape`, and dtype audit  
-- Quantified missing values (counts + percentages)  
-- Identified outliers and data type issues  
-- Explored relationships between features and ESI  
+---
 
-### Tutorial 3 – Exploratory Visualization  
-- Visualised ESI distribution and demographic breakdowns  
-- Explored missingness and chief complaint patterns  
-- Examined relationships between vitals and acuity  
+## Objective
+To assess the feasibility of building a predictive model for ED triage acuity (ESI) by performing exploratory data analysis, identifying data quality issues, and evaluating clinical relevance.
 
-### Outcome  
-Produced a data profiling report and feasibility summary to assess readiness for predictive modelling.
+---
+
+## Work Completed
+
+### 1. Clinical Data Understanding
+- Interpreted dataset structure and clinical meaning of variables
+- Identified key feature groups:
+  - Vital signs (heart rate, blood pressure, respiratory rate, oxygen saturation, temperature, glucose)
+  - Demographics (age, gender, ethnicity, race, insurance status)
+  - Chief complaints (~200 binary indicators)
+- Recognised Emergency Severity Index (ESI) as the target variable
+- Highlighted potential data leakage risks and fairness-sensitive variables
+
+---
+
+### 2. Data Profiling & Quality Assessment
+- Used `df.info()`, `df.describe()`, and `df.shape` for initial profiling
+- Performed dtype audit to identify incorrect or inconsistent data types
+- Quantified missing values (both counts and percentages per column)
+- Identified outliers and implausible physiological values in vital signs
+- Assessed sparsity in high-dimensional chief complaint features
+
+---
+
+### 3. Exploratory Data Visualization
+- Visualised ESI distribution across patient population
+- Explored missingness patterns across features
+- Analysed relationships between vital signs and acuity levels
+- Examined demographic distributions (race, gender, age)
+
+---
+
+## Key Outputs
+- Data profiling notebook (`/notebooks`)
+- Missingness visualisation and analysis (`/docs`)
+- Clinical feasibility memo assessing dataset readiness for modelling (`/docs`)
+
+
+
+---
+
+## Outcome
+A structured exploratory analysis was completed to evaluate the dataset’s suitability for predictive modelling. The results informed a feasibility assessment outlining strengths, limitations, and data quality concerns relevant to clinical deployment.
+
+The dataset is considered suitable for exploratory modelling following appropriate preprocessing, feature engineering, and fairness-aware evaluation.
