@@ -9,8 +9,8 @@ The project bridges healthcare and data science by applying structured data clea
 
 ## Repository Structure
 
-- `notebooks/` → Week 0 EDA and analysis notebooks  
-- `docs/` → Week 1 literature review and Week 2 updated proposal  
+- `notebooks/` → Week 0 EDA and analysis notebooks + Week 5 emergency department dataset exploration and data-quality dashboard
+- `docs/` → Week 1 literature review, Week 2 updated proposal, and Week 5 feasibility memo
 - `data/` → Dataset reference (no raw patient data stored)
 
 ---
