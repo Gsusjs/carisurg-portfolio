@@ -19,7 +19,9 @@ The project bridges healthcare and data science by applying structured data clea
 
 - Week 0: Data cleaning (Gender, DBP) + visualisations + triage algorithm  
 - Week 1: Literature review on AI-assisted emergency triage  
-- Week 2: Repository restructuring + reference management + updated proposal  
+- Week 2: Repository restructuring + reference management + updated proposal
+- Week 5: Emergency department dataset exploration, data-quality dashboard, feasibility memo, and clinical feature shortlist
+
 
 ---
 
@@ -35,8 +37,11 @@ pip install -r requirements.txt
 
 ---
 
-## Notes
+## Data Governance
 
+The clinical dataset is not stored in this repository due to healthcare data governance considerations.
+
+Dataset files are excluded using `.gitignore`.
 
 
 ---
