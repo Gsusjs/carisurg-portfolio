@@ -21,6 +21,8 @@ The project bridges healthcare and data science by applying structured data clea
 - Week 1: Literature review on AI-assisted emergency triage  
 - Week 2: Repository restructuring + reference management + updated proposal
 - Week 5: Emergency department dataset exploration, data-quality dashboard, feasibility memo, and clinical feature shortlist
+- Week 6 — Baseline models were trained using a fixed random seed (42) with an 80/20 stratified train-test split on the ESI target variable to ensure reproducible results
+
 
 
 ---
