@@ -56,6 +56,20 @@ To assess the feasibility of building a predictive model for ED triage acuity (E
 
 ---
 
+## Model Reproducibility
+
+The Week 6 baseline models use a fixed random seed of 42.
+
+The dataset was divided into:
+- 80% training data
+- 20% testing data
+
+The split used stratification on the ESI target variable to maintain the distribution of triage levels between the training and testing sets.
+
+Using the same random seed allows the model results to be reproduced by other reviewers.
+
+---
+
 ## Key Outputs
 - Data profiling notebook (`/notebooks`)
 - Missingness visualisation and analysis (`/docs`)
