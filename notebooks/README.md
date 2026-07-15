@@ -15,7 +15,7 @@ This repository documents my weekly assignments for the Mercer General Hospital 
 ---
 
 
-# Week 5 — Clinical Data Profiling & Feasibility Assessment
+## Week 5 — Clinical Data Profiling & Feasibility Assessment
 
 This week focused on understanding and evaluating an Emergency Department (ED) triage dataset prior to modelling. The emphasis was on data quality, structure, and clinical interpretation to determine readiness for predictive modelling.
 
@@ -56,9 +56,7 @@ To assess the feasibility of building a predictive model for ED triage acuity (E
 
 ---
 
-## Model Reproducibility
-
-The Week 6 baseline models use a fixed random seed of 42.
+## The Week 6 - Baseline models use a fixed random seed of 42.
 
 The dataset was divided into:
 - 80% training data
