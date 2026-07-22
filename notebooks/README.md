@@ -68,6 +68,17 @@ Using the same random seed allows the model results to be reproduced by other re
 
 ---
 
+### Week 7 - Cost-Benefit Memo
+
+Model Selection for Emergency Severity Index (ESI) Prediction
+Verdict
+Logistic Regression is recommended for Phase 3 development because it provides the strongest
+balance between predictive performance, interpretability, computational efficiency, and
+operational simplicity compared with the more complex models evaluated
+
+---
+
+
 ## Key Outputs
 - Data profiling notebook (`/notebooks`)
 - Missingness visualisation and analysis (`/docs`)
