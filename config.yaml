@@ -1,7 +1,4 @@
-# CariSurg Triage — training config (DRAFT, interim submission)
-# Task 1 (final model + pinned hyperparameters) is not locked yet.
-# logistic_regression is listed first because it's the current Week 7
-# recommendation — confirm/replace before final submission.
+# CariSurg Triage — training configuration
 
 seed: 42
 
@@ -10,8 +7,6 @@ data:
   target: "esi"
   test_size: 0.20
 
-# The model(s) scripts/train.py will actually train when it lands.
-# Keep this to ONE entry for the final submission (Task 1: one decision).
 final_models: ["logistic_regression"]
 
 models:
