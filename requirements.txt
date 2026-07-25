@@ -2,3 +2,7 @@ pandas
 numpy
 matplotlib
 jupyter
+pytest
+scikit-learn
+joblib
+pyyaml
