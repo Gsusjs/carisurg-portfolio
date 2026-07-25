@@ -1,17 +1,16 @@
 """
-src/data.py
+src/data.py — Data loading and cleaning for the ESI triage model.
 
-Data loading and cleaning functions for the ESI triage prediction pipeline.
-
-Refactored from the Week 6 baseline notebook and reused unchanged in Week 7
-to keep the baseline vs. complex-model comparison fair. Logic is preserved
-exactly from the notebook cells — this module only restructures it into
-importable, testable functions.
+Refactored from the Week 6 and Week 7 exploratory notebooks. The cleaning
+logic itself is unchanged from the notebooks (Week 7's clean_triage_data,
+which reused Week 6's rules) — only restructured into functions with
+explicit signatures instead of notebook globals.
 """
 
-import os
 import pandas as pd
 import numpy as np
+
+TARGET = "esi"
 
 VITAL_COLS = [
     "triage_vital_hr",
@@ -23,12 +22,9 @@ VITAL_COLS = [
     "triage_glucose",
 ]
 
-TARGET = "esi"
-
-LEAKAGE = [
-    "disposition",
-    "previousdispo",
-]
+# Variables unavailable at triage time / that would leak the outcome,
+# and columns intentionally excluded from modelling (see Week 6/7).
+LEAKAGE = ["disposition", "previousdispo"]
 
 ADMIN = [
     "dep_name",
@@ -51,67 +47,22 @@ DEMOGRAPHICS = [
 ]
 
 
-def resolve_data_path(raw_filename: str, drive_dir: str = "/content/drive/MyDrive/CariSurg/") -> str:
-    """
-    Resolve the dataset path, preferring a mounted Google Drive copy
-    (Colab workflow) and falling back to a local copy alongside the
-    code (GitHub / new-hire workflow).
-
-    Parameters
-    ----------
-    raw_filename : str
-        Name of the raw CSV file.
-    drive_dir : str
-        Google Drive directory used in the original Colab workflow.
-
-    Returns
-    -------
-    str
-        The resolved path to use with pandas.read_csv.
-    """
-    drive_path = os.path.join(drive_dir, raw_filename)
-    return drive_path if os.path.exists(drive_path) else raw_filename
-
-
-def load_raw_data(path: str) -> pd.DataFrame:
-    """
-    Load the raw triage CSV from disk.
-
-    Parameters
-    ----------
-    path : str
-        Path to the CSV file.
-
-    Returns
-    -------
-    pd.DataFrame
-        Raw, unprocessed dataframe.
-    """
+def load_raw(path: str) -> pd.DataFrame:
+    """Load the raw Yale EMMLC triage CSV from `path`."""
     return pd.read_csv(path)
 
 
-def clean_triage_data(raw: pd.DataFrame) -> pd.DataFrame:
+def clean(raw: pd.DataFrame) -> pd.DataFrame:
     """
-    Apply the Week 6 cleaning rules to the raw triage dataframe.
+    Clean the raw triage dataframe.
 
-    Steps:
-      - drop stray "Unnamed" index columns
-      - coerce vital sign columns and target to numeric
-      - keep only valid ESI classes (1-5)
-      - null out physiologically implausible temperature / o2 readings
-      - normalise gender to a binary numeric column
-      - median-impute vitals, age and gender
-      - cast esi to int
-
-    Parameters
-    ----------
-    raw : pd.DataFrame
-        Raw dataframe as returned by load_raw_data.
-
-    Returns
-    -------
-    pd.DataFrame
-        Cleaned dataframe ready for feature selection.
+    Mirrors the Week 6/7 notebook cleaning exactly:
+      - drops stray 'Unnamed' index columns
+      - coerces vitals and esi to numeric
+      - drops rows with an invalid ESI label (keeps only 1-5)
+      - nulls out physiologically impossible temp/o2 readings
+      - encodes gender as 0/1 (male/m -> 0, female/f -> 1)
+      - median-imputes vitals, age, and gender
     """
     df = raw.copy()
 
@@ -123,9 +74,8 @@ def clean_triage_data(raw: pd.DataFrame) -> pd.DataFrame:
     for col in VITAL_COLS:
         df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    df["esi"] = pd.to_numeric(df["esi"], errors="coerce")
-
-    df = df[df["esi"].isin([1, 2, 3, 4, 5])]
+    df[TARGET] = pd.to_numeric(df[TARGET], errors="coerce")
+    df = df[df[TARGET].isin([1, 2, 3, 4, 5])]
 
     df.loc[
         (df["triage_vital_temp"] < 90) | (df["triage_vital_temp"] > 110),
@@ -134,8 +84,6 @@ def clean_triage_data(raw: pd.DataFrame) -> pd.DataFrame:
 
     df.loc[df["triage_vital_o2"] > 100, "triage_vital_o2"] = np.nan
 
-    # .str.strip() before .str.lower() -- stops values like " Female "
-    # from falling through the map() as missing.
     df["gender"] = (
         df["gender"]
         .astype(str)
@@ -147,27 +95,20 @@ def clean_triage_data(raw: pd.DataFrame) -> pd.DataFrame:
     for col in VITAL_COLS + ["age", "gender"]:
         df[col] = df[col].fillna(df[col].median())
 
-    df["esi"] = df["esi"].astype(int)
+    df[TARGET] = df[TARGET].astype(int)
 
     return df
 
 
-def get_feature_columns(df: pd.DataFrame) -> list:
-    """
-    Return the list of feature columns available at triage time,
-    excluding the target, known leakage columns, admin/logistics
-    columns, and demographic columns.
+def select_features(df: pd.DataFrame) -> list:
+    """Return the modelling feature-column list (excludes target/leakage/admin/demographics)."""
+    return [
+        c for c in df.columns
+        if c != TARGET and c not in LEAKAGE + ADMIN + DEMOGRAPHICS
+    ]
 
-    Parameters
-    ----------
-    df : pd.DataFrame
-        Cleaned dataframe.
 
-    Returns
-    -------
-    list
-        Ordered list of feature column names.
-    """
-    excluded = set([TARGET] + LEAKAGE + ADMIN + DEMOGRAPHICS)
-    return [c for c in df.columns if c not in excluded]
-
+def get_xy(df: pd.DataFrame):
+    """Split a cleaned dataframe into (X, y) using select_features()."""
+    features = select_features(df)
+    return df[features], df[TARGET]
