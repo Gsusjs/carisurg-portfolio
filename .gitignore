@@ -2,4 +2,15 @@ __pycache__/
 .ipynb_checkpoints/
 *.pyc
 .DS_Store
-yaleemmlc_admissionprediction_triage.csv
+
+# Data — never commit patient data (covers any CSV, not just this one)
+data/
+*.csv
+
+# Trained models / artifacts
+models/
+*.pkl
+*.joblib
+
+# Test cache
+.pytest_cache/
