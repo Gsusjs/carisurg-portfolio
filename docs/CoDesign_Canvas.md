@@ -56,9 +56,8 @@ The nurse reviews the patient's observations, reassesses the patient where neces
 
 ![ED Triage Desk Mockup](figs/w9_HCI_ED_TriageDesk_Mockup.png)
 
-Figure 1 shows the proposed HCI interface integrated into the existing ED triage workflow. The AI recommendation appears alongside the nurse's manual ESI assessment, allowing the nurse to review the confidence score and supporting rationale before confirming or overriding the recommendation.
+Figure 1 shows the proposed HCI interface integrated into the existing ED triage workflow. The AI recommendation appears alongside the nurse's manual ESI assessment, allowing the nurse to review the recommended ESI level, the AI confidence score (representing the model's certainty in its recommendation rather than patient severity), and the supporting clinical rationale before confirming or overriding the recommendation. This design preserves nurse oversight while improving transparency and supporting informed decision-making.
 
-*The percentages are the AI confidence which reflects certainty in the recommended ESI level for each patient and is not a measure of patient severity or priority.*
 ---
 
 ## 3. Full Co-Design Canvas - HCI: ED Triage Desk (Preferred Implementation)
