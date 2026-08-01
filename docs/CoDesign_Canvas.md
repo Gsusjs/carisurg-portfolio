@@ -48,7 +48,7 @@ The nurse reviews the patient's observations, reassesses the patient where neces
 2. **Reliable interaction** - voice or touchscreen input must remain usable despite background noise, patient stress, or limited mobility.
 3. **Graceful degradation** - if sensors fail or readings cannot be collected, the system must clearly indicate missing data instead of generating unreliable recommendations.
 
----
+
 
 ---
 
@@ -58,6 +58,7 @@ The nurse reviews the patient's observations, reassesses the patient where neces
 
 Figure 1 shows the proposed HCI interface integrated into the existing ED triage workflow. The AI recommendation appears alongside the nurse's manual ESI assessment, allowing the nurse to review the confidence score and supporting rationale before confirming or overriding the recommendation.
 
+*The percentages are the AI confidence which reflects certainty in the recommended ESI level for each patient and is not a measure of patient severity or priority.*
 ---
 
 ## 3. Full Co-Design Canvas - HCI: ED Triage Desk (Preferred Implementation)
