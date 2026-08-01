@@ -1,4 +1,4 @@
-# Co-Design Canvas - CariSurg Triage AI (Week 9 – Interim)
+# Co-Design Canvas - CariSurg Triage AI 
 
 Two deployment settings are being considered for the logistic regression triage model developed in the previous weeks. This document outlines the problem space for both settings, provides a full co-design canvas for the preferred implementation (HCI – ED Triage Desk), and includes a draft problem-space canvas for the secondary implementation (HRI – Observation Unit).
 
@@ -50,6 +50,16 @@ The nurse reviews the patient's observations, reassesses the patient where neces
 
 ---
 
+---
+
+**Figure 1. HCI Mock-up – ED Triage Desk Interface**
+
+![ED Triage Desk Mockup](figs/w9_HCI_ED_TriageDesk_Mockup.png)
+
+Figure 1 shows the proposed HCI interface integrated into the existing ED triage workflow. The AI recommendation appears alongside the nurse's manual ESI assessment, allowing the nurse to review the confidence score and supporting rationale before confirming or overriding the recommendation.
+
+---
+
 ## 3. Full Co-Design Canvas - HCI: ED Triage Desk (Preferred Implementation)
 
 ### Problem
@@ -91,4 +101,5 @@ The preferred implementation is a web-based interface integrated into the hospit
 Patients in the Observation Unit may spend extended periods waiting between routine nursing assessments. A robot-assisted kiosk could collect vital signs more frequently and identify possible deterioration earlier, allowing nurses to respond more quickly when required.
 
 However, the system should not replace face-to-face clinical assessment. It must also be suitable for patients who may have difficulty using a kiosk independently, including elderly patients, those with mobility or cognitive impairments, or individuals unfamiliar with the technology.
+
 
