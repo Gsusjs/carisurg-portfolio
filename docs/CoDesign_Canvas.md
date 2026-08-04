@@ -24,6 +24,8 @@
 
 # Figure 1. HCI Mock-up - ED Triage Desk Interface
 
+![Figure 1. HCI Mock-up - ED Triage Desk Interface](figs/w9_HCI_ED_TriageDesk_Mockup.png)
+
 Figure 1 shows the proposed HCI interface integrated into the existing ED triage workflow. The AI recommendation appears alongside the nurse’s manual ESI assessment, allowing the nurse to review the confidence score and supporting rationale before confirming or overriding the recommendation.
 
 ---
@@ -91,9 +93,9 @@ Using existing desktop workstations avoids introducing additional hardware while
 
 # Figure 2. HRI Mock-up - Observation Unit Kiosk
 
-Figure 2 shows the stationary kiosk concept and the paired nurse-station alert view it feeds into.
+![Figure 2. HRI Mock-up - Observation Unit Kiosk](figs/week_9_HRI_Observation_Kiosk_Mockup.png)
 
-The patient never sees a raw ESI number or alert; only the nurse station receives the recommendation, consistent with the Ethics section below.
+Figure 2 shows the stationary kiosk concept and the paired nurse-station alert view it feeds into. The patient never sees a raw ESI number or alert; only the nurse station receives the recommendation, consistent with the Ethics section below.
 
 ---
 
