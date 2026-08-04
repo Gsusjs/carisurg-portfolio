@@ -1,8 +1,4 @@
 
-Three HCI-specific and three HRI-specific safety considerations, each with the specific mechanism used to address it, not just the concern by itself.
-
----
-
 # HCI-Specific (ED Triage Desk)
 
 ## 1. Alarm Fatigue
