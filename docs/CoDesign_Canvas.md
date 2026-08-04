@@ -1,59 +1,14 @@
-# Co-Design Canvas CariSurg Triage AI
 
----
 
 # Problem Space Both Settings
 
-## Problem Space
+| Problem Space | Setting A - HCI: Main ED Triage Desk (Screen-Based, Nurse-Facing) | Setting B - HRI: Observation Unit (Stationary Observation Kiosk) |
+|---|---|---|
+| **Who is the user?** | The primary user is the triage nurse, who performs the patient's initial assessment upon arrival at the Emergency Department. | Patients in the Observation Unit use the stationary kiosk to complete routine monitoring while nurses supervise alerts and patient status from the nursing station. |
+| **What data does the model receive?** | Manually entered vital signs (heart rate, blood pressure, respiratory rate, oxygen saturation, temperature, and blood glucose where available) together with the patient's chief complaint. | Continuous vital-sign measurements (blood pressure, oxygen saturation, pulse rate, and temperature) collected through integrated monitoring devices, together with the patient's chief complaint entered via the touchscreen. |
+| **What does the model emit?** | A predicted Emergency Severity Index (ESI) level (1-5), displayed with a colour-coded urgency indicator, confidence score, and a brief explanation highlighting the most influential clinical features. | Colour-coded alerts and nurse notifications when patient deterioration is detected. Patients receive simple on-screen status messages, while detailed AI recommendations are displayed only at the nursing station. |
+| **What does the human do next?** | The nurse compares the AI recommendation with their own clinical assessment. If they differ, the nurse reviews the explanation before accepting or overriding the recommendation. All overrides are recorded for audit purposes. | The nurse reviews alerts, reassesses the patient where necessary, and determines the appropriate care pathway. The kiosk supports monitoring only and does not make clinical decisions or initiate patient care independently. |
 
-| Setting | Description |
-|---|---|
-| **Setting A - HCI** | Main ED Triage Desk (Screen-Based, Nurse-Facing) |
-| **Setting B - HRI** | Observation Unit (Stationary Observation Kiosk) |
-
----
-
-## Who is the user?
-
-The primary user is the triage nurse, who performs the patient's initial assessment upon arrival at the Emergency Department.
-
-Patients in the Observation Unit use the stationary kiosk to complete routine monitoring while nurses supervise alerts and patient status from the nursing station.
-
----
-
-## What data does the model receive?
-
-**HCI - ED Triage Desk**
-
-Manually entered vital signs (heart rate, blood pressure, respiratory rate, oxygen saturation, temperature, and blood glucose where available) together with the patient's chief complaint.
-
-**HRI - Observation Unit**
-
-Continuous vital-sign measurements (blood pressure, oxygen saturation, pulse rate, and temperature) collected through integrated monitoring devices, together with the patient's chief complaint entered via the touchscreen.
-
----
-
-## What does the model emit?
-
-**HCI - ED Triage Desk**
-
-A predicted Emergency Severity Index (ESI) level (1-5), displayed with a colour-coded urgency indicator, confidence score, and a brief explanation highlighting the most influential clinical features.
-
-**HRI - Observation Unit**
-
-Colour-coded alerts and nurse notifications when patient deterioration is detected. Patients receive simple on-screen status messages, while detailed AI recommendations are displayed only at the nursing station.
-
----
-
-## What does the human do next?
-
-**HCI - ED Triage Desk**
-
-The nurse compares the AI recommendation with their own clinical assessment. If they differ, the nurse reviews the explanation before accepting or overriding the recommendation. All overrides are recorded for audit purposes.
-
-**HRI - Observation Unit**
-
-The nurse reviews alerts, reassesses the patient where necessary, and determines the appropriate care pathway. The kiosk supports monitoring only and does not make clinical decisions or initiate patient care independently.
 
 ---
 
