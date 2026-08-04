@@ -1,4 +1,4 @@
-# CariSurg Healthcare AI Portfolio (Weeks 0–9)
+# CariSurg Healthcare AI Portfolio (Weeks 0-9)
 
 This repository documents my weekly assignments for the Mercer General Hospital Clinical AI & Innovation Unit training program, spanning clinical data cleaning, exploratory analysis, model development, and a reproducible, config-driven triage prediction pipeline for emergency care settings.
 
